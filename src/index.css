@@ -12,7 +12,7 @@ html{
 
 --body-font: 'Poppins', sans-serif;
 
---big-font: 2.6rem;
+--big-font: 3.5rem;
 --h1-font: 2rem;
 --h2-font: 1.8rem;
 --h3-font: 1.7rem;
@@ -50,7 +50,7 @@ html{
 /*Font sizes For Small Screen 968px */
 @media screen and (max-width: 990px) {
 :root {
---big-font: 3.5rem;
+--big-font: 2.5rem;
 --h1-font: 1.5rem;
 --h2-font: 1.3rem;
 --h3-font: 1.2rem;

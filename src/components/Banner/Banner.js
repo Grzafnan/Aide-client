@@ -59,7 +59,6 @@ const Banner = () => {
               </div>
             </div>)
           }
-
         </div>
         <div className="switch">
           <ul>
