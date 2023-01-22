@@ -12,14 +12,13 @@ html{
 
 --body-font: 'Poppins', sans-serif;
 
---big-font: 4rem;
---h1-font: 3.6rem;
---h2-font: 2.4rem;
---h3-font: 2rem;
---h4-font: 1.8rem;
---normal-font: 1.6rem;
+--big-font: 2.6rem;
+--h1-font: 2rem;
+--h2-font: 1.8rem;
+--h3-font: 1.7rem;
+--h4-font: 1.5rem;
+--normal-font: 1rem;
 --small-font: 1.4rem;
---smaller-font: 1.3rem;
 
 /* Font Weight ***/
 --font-regular: 400;
@@ -45,17 +44,19 @@ html{
 --tran-0-5: 0.5s;
 }
 
+
+
+
 /*Font sizes For Small Screen 968px */
 @media screen and (max-width: 990px) {
 :root {
 --big-font: 3.5rem;
---h1-font: 2.4rem;
---h2-font: 2rem;
---h3-font: 1.8rem;
---h4-font: 1.6rem;
---normal-font: 1.5rem;
---small-font: 1.3rem;
---smaller-font: 1.2rem;
+--h1-font: 1.5rem;
+--h2-font: 1.3rem;
+--h3-font: 1.2rem;
+--h4-font: 1.1rem;
+--normal-font: 1rem;
+--small-font: 0.9rem;
 }
 }
 
@@ -73,7 +74,7 @@ body{
 
 /* Reusuable CSS */
 .section{
-  padding: 7rem 2rem;
+  padding: 6rem 1.5rem;
 }
 .container{
   max-width: 1420px;
@@ -85,4 +86,10 @@ body{
   display: flex;
   align-items: center;
   column-gap: 0.6rem;
+}
+
+@media screen and (max-width: 640px) {
+  .section{
+    padding: 2rem 0;
+  }
 }
