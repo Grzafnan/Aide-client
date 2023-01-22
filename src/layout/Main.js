@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
+import Footer from '../components/Footer/Footer';
 import Navbar from '../Pages/Shared/Navbar/Navbar';
 
 const Main = () => {
@@ -13,6 +14,7 @@ const Main = () => {
     <>
       <Navbar />
       <Outlet />
+      <Footer />
     </>
   );
 };

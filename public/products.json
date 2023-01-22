@@ -1,0 +1,58 @@
+[
+  {
+  "id": "1",
+  "title": "Beef",
+  "price": "100",
+  "img": "https://www.themealdb.com/images/category/beef.png",
+  "description": "Beef is the culinary name for meat from cattle, particularly skeletal muscle. Humans have been eating beef since prehistoric times.[1] Beef is a source of high-quality protein and essential nutrients.[2]"
+  },
+  {
+  "id": "2",
+  "title": "Chicken",
+  "price": "100",
+  "img": "https://www.themealdb.com/images/category/chicken.png",
+  "description": "Chicken is a type of domesticated fowl, a subspecies of the red junglefowl. It is one of the most common and widespread domestic animals, with a total population of more than 19 billion as of 2011.[1] Humans commonly keep chickens as a source of food (consuming both their meat and eggs) and, more rarely, as pets."
+  },
+  {
+  "id": "3",
+  "title": "Dessert",
+  "price": "100",
+  "img": "https://www.themealdb.com/images/category/dessert.png",
+  "description": "Dessert is a course that concludes a meal. The course usually consists of sweet foods, such as confections dishes or fruit, and possibly a beverage such as dessert wine or liqueur, however in the United States it may include coffee, cheeses, nuts, or other savory items regarded as a separate course elsewhere. In some parts of the world, such as much of central and western Africa, and most parts of China, there is no tradition of a dessert course to conclude a meal. The term dessert can apply to many confections, such as biscuits, cakes, cookies, custards, gelatins, ice creams, pastries, pies, puddings, and sweet soups, and tarts. Fruit is also commonly found in dessert courses because of its naturally occurring sweetness. Some cultures sweeten foods that are more commonly savory to create desserts."
+  },
+  {
+  "id": "4",
+  "title": "Lamb",
+  "price": "100",
+  "img": "https://www.themealdb.com/images/category/lamb.png",
+  "description": "Lamb, hogget, and mutton are the meat of domestic sheep (species Ovis aries) at different ages. A sheep in its first year is called a lamb, and its meat is also called lamb. The meat of a juvenile sheep older than one year is hogget; outside the USA this is also a term for the living animal. The meat of an adult sheep is mutton, a term only used for the meat, not the living animals. The term mutton is almost always used to refer to goat meat in the Indian subcontinent. "
+  },
+  {
+  "id": "5",
+  "title": "Miscellaneous",
+  "price": "100",
+  "img": "https://www.themealdb.com/images/category/miscellaneous.png",
+  "description": "General foods that don't fit into another category"
+  },
+  {
+  "id": "6",
+  "title": "Pork",
+  "price": "100",
+  "img": "https://www.themealdb.com/images/category/pasta.png",
+  "description": "Pasta is a staple food of traditional Italian cuisine, with the first reference dating to 1154 in Sicily. Also commonly used to refer to the variety of pasta dishes, pasta is typically a noodle made from an unleavened dough of a durum wheat flour mixed with water or eggs and formed into sheets or various shapes, then cooked by boiling or baking. As an alternative for those wanting a different taste, or who need to avoid products containing gluten, some pastas can be made using rice flour in place of wheat.[3][4] Pastas may be divided into two broad categories, dried (pasta secca) and fresh (pasta fresca)."
+  },
+  {
+    "id": "7",
+    "title": "Seafood",
+    "price": "150",
+    "img": "https://www.themealdb.com/images/category/vegetarian.png",
+    "description": "Vegetarianism is the practice of abstaining from the consumption of meat (red meat, poultry, seafood, and the flesh of any other animal), and may also include abstention from by-products of animal slaughter. Vegetarianism may be adopted for various reasons. Many people object to eating meat out of respect for sentient life. Such ethical motivations have been codified under various religious beliefs, as well as animal rights advocacy. Other motivations for vegetarianism are health-related, political, environmental, cultural, aesthetic, economic, or personal preference. There are variations of the diet as well: an ovo-lacto vegetarian diet includes both eggs and dairy products, an ovo-vegetarian diet includes eggs but not dairy products, and a lacto-vegetarian diet includes dairy products but not eggs. A vegan diet excludes all animal products, including eggs and dairy. Some vegans also avoid other animal products such as beeswax, leather or silk clothing, and goose-fat shoe polish."
+    },
+    {
+    "id": "8",
+    "title": "Breakfast",
+    "price": "150",
+    "img": "https://www.themealdb.com/images/category/breakfast.png",
+    "description": "Breakfast is the first meal of a day. The word in English refers to breaking the fasting period of the previous night. There is a strong likelihood for one or more typical , or  traditional , breakfast menus to exist in most places, but their composition varies widely from place to place, and has varied over time, so that globally a very wide range of preparations and ingredients are now associated with breakfast."
+    }
+]

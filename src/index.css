@@ -27,7 +27,7 @@ html{
 
 /* Color Variables */
 --primary-color: #d52685;
---primary-color-hover: #fb6f92;
+--primary-color-hover: #fc3466;
 --text-color: #333;
 --text-color-light: #888682;
 --border-color: #484848;
@@ -46,7 +46,6 @@ html{
 
 
 
-
 /*Font sizes For Small Screen 968px */
 @media screen and (max-width: 990px) {
 :root {
@@ -55,7 +54,6 @@ html{
 --h2-font: 1.3rem;
 --h3-font: 1.2rem;
 --h4-font: 1.1rem;
---normal-font: 1rem;
 --small-font: 0.9rem;
 }
 }
