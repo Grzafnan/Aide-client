@@ -66,6 +66,8 @@ h2{
   color: #fff;
   padding: 10px;
   border-radius: 5px;
+  border: none;
+  cursor: pointer;
   transition: backgound 0.5s linear;
 }
 .btn:hover{

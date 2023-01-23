@@ -1,11 +1,20 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Login.css'
-
+import axios from 'axios';
+import toast from 'react-hot-toast';
+import { AuthContext } from '../../../contexts/AuthProvider/Authprovider';
 
 
 const Login = () => {
   const [toggle, setToggle] = useState(false);
   const [checkBox, setCheckBox] = useState(false);
+  const { createUser, signInWithEmail, updateUserProfile, setLoading } = useContext(AuthContext)
+
+
+  const location = useLocation();
+  const navigate = useNavigate();
+
 
   const handleSignUp = (e) => {
     e.preventDefault();
@@ -15,7 +24,38 @@ const Login = () => {
     const password = form.password.value;
     const user = { name, email, password }
 
-    console.log(user);
+
+    createUser(email, password)
+      .then((userCredential) => {
+        // Signed in 
+        const user = userCredential.user;
+        const currentUser = {
+          email: user.email
+        };
+        update(name);
+        savedUserDB(name, email, 'user')
+        // jwtVerify(currentUser)
+        navigate('/');
+        toast.success('Register Success', { autoClose: 500 })
+        // ...
+      })
+      .catch((error) => {
+        const errorMessage = error.message;
+        console.error(errorMessage);
+        toast.error(errorMessage, { autoClose: 500 });
+        // ..
+      })
+  }
+
+  const update = (name) => {
+    updateUserProfile(name)
+      .then(() => {
+        // Profile updated!
+        // ...
+      }).catch((error) => {
+        // An error occurred
+        // ...
+      });
   }
 
 
@@ -24,8 +64,43 @@ const Login = () => {
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
-    const user = { email, password }
-    console.log(user);
+
+    signInWithEmail(email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        // console.log(user);
+        // setLoginUserEmail(data.email)
+        form.reset();
+        navigate('/');
+        toast.success('Login successful');
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(error);
+        toast.error(errorMessage)
+      })
+      .finally(() => {
+        setLoading(false)
+      })
+  }
+
+
+
+
+  const savedUserDB = (name, email, role) => {
+    const user = {
+      name,
+      email,
+      role,
+    }
+
+    axios.post(`${process.env.REACT_APP_API_URL}/users`, user)
+      .then(res => {
+        console.log(res.data);
+      }).catch(err => {
+        console.log(err);
+      })
   }
 
 

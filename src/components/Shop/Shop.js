@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import Product from './Product/Product';
+import axios from 'axios';
 import './Shop.css'
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
 
-  console.log(products);
+  // console.log(products);
 
   useEffect(() => {
-    fetch('products.json')
-      .then(res => res.json())
-      .then(data => setProducts(data))
+    axios.get(`${process.env.REACT_APP_API_URL}/products`)
+      .then(res => setProducts(res.data.data))
+      .catch(err => {
+        console.log(err);
+      })
   }, [])
 
 
@@ -24,7 +27,7 @@ const Shop = () => {
 
       <div className='product-container'>
         {
-          products?.map(product => <Product key={product.id} product={product} />)
+          products?.map(product => <Product key={product._id} product={product} />)
         }
       </div>
     </section>

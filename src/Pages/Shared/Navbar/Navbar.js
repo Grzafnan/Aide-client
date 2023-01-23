@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../contexts/AuthProvider/Authprovider';
 import './Navbar..css'
 
 const Navbar = () => {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
+  const { user, logOut } = useContext(AuthContext);
 
   const openMenu = () => {
     setOpen(true)
@@ -27,12 +29,25 @@ const Navbar = () => {
               <li>
                 <Link to="my-cart" className="nav-link">My Cart</Link>
               </li>
-              <li>
-                <Link to="/dashboard" className="nav-link">Dashboard</Link>
-              </li>
-              <li>
-                <Link to="/login" className="nav-link">Log in</Link>
-              </li>
+
+              {
+                user?.uid ? (
+                  <>
+                    <li>
+                      <Link to="/dashboard" className="nav-link">Dashboard</Link>
+                    </li>
+                    <li>
+                      <button onClick={logOut} className="nav-btn">Sign out</button>
+                    </li>
+                  </>
+                )
+                  : (
+                    <li>
+                      <Link to="/login" className="nav-link">Log in</Link>
+                    </li>
+                  )
+              }
+
             </ul>
 
             <button

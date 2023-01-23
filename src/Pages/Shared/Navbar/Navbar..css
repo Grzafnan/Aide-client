@@ -85,6 +85,15 @@
   background-color: var(--text-color);
 } */
 
+.nav-btn{
+  font-size: 14px;
+  font-weight: var(--font-medium);
+  border: none;
+  padding: 8px 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
 .navClose-btn,
 .navOpen-btn{
   display: none;

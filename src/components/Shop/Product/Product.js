@@ -15,7 +15,7 @@ const Product = ({ product }) => {
           </div>
           <div className="desc">{product?.description.slice(0, 100) + "..."}
           </div>
-          <a href="#" className="btn">add to cart</a>
+          <button className="btn">add to cart</button>
         </div>
       </div>
     </>
