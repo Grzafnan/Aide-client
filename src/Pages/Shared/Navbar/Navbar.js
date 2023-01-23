@@ -30,6 +30,9 @@ const Navbar = () => {
               <li>
                 <Link to="/dashboard" className="nav-link">Dashboard</Link>
               </li>
+              <li>
+                <Link to="/login" className="nav-link">Log in</Link>
+              </li>
             </ul>
 
             <button

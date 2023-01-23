@@ -37,7 +37,7 @@ const Brand = () => {
   ]
   return (
     <>
-      <section className="section">
+      <section className="section brand-wrapper">
         <div className="container">
           <h1 className="section-subtitle">Our Trusted Brand</h1>
           <div className="brand-images">

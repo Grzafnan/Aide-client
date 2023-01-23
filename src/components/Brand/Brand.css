@@ -1,4 +1,6 @@
-
+.brand-wrapper{
+  padding-bottom: 1rem !important;
+}
 
 .section-subtitle{
   color: var(--primary-color);
