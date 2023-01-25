@@ -29,7 +29,7 @@ const Dashboard = () => {
           <div className="sidebar-menu">
             <ul>
               <li>
-                <NavLink to='all-users' className={({ isActive }) =>
+                <NavLink to='' className={({ isActive }) =>
                   isActive ? "active" : undefined
                 } >
                   <img src={users} alt=''></img>

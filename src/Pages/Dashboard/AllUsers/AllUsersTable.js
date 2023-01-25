@@ -275,7 +275,7 @@ const AllUsersTable = ({ nextRef, options }) => {
                   STATUS
                   <input type="checkbox" name="type" className='dropdown-checkbox-input'
                     checked={!hideStatus}
-                    onChange={() => setHideStatus(!hideUser)}
+                    onChange={() => setHideStatus(!hideStatus)}
                   /></label>
               </li>
               <li className='dropdown-checkbox-list'>

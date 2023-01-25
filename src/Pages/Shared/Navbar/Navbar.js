@@ -31,7 +31,7 @@ const Navbar = () => {
           </Link>
           <div className={`menu-content ${open ? 'open overflowY-hidden' : 'overflowY-scroll'}`}>
             <ul className="menu-list flex">
-              <li><a href="#home" className="nav-link active-navlink">home</a></li>
+              <li><Link to='/' className="nav-link active-navlink">home</Link></li>
               <li><a href="#shop" className="nav-link">Shop</a></li>
 
               {

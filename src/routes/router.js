@@ -34,7 +34,7 @@ export const router = createBrowserRouter([
     errorElement: <h1 style={{ fontSize: '40px', color: 'red', minHeight: '90vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>Error 404!</h1>,
     children: [
       {
-        path: 'all-users',
+        path: '',
         element: <AllUsers />
       },
       {
