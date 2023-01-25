@@ -32,16 +32,16 @@
 .dropdown {
   position: relative;
 }
-ul {
+.dropdownSelect ul {
   margin: 0;
   padding: 0;
 }
-ul li {
+.dropdownSelect ul li {
   list-style: none;
   padding-left: 10px;
   cursor: pointer;
 }
-ul li:hover {
+.dropdownSelect ul li:hover {
   background: rgba(255, 255, 255, 0.1);
 }
 .dropdown-select {

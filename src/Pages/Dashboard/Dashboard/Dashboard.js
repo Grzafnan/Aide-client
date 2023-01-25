@@ -1,27 +1,21 @@
 import React from 'react';
-import Navbar from '../../Shared/Navbar/Navbar';
-import '../../Shared/Navbar/Navbar..css'
 import './Dashboard.css'
 import user from '../../../assets/dashboard/user.png'
 import users from '../../../assets/dashboard/users.png'
 import addProduct from '../../../assets/dashboard/add-product.png'
-import { AiOutlineDown } from "react-icons/ai";
 import { Link, NavLink, Outlet } from 'react-router-dom';
-
 import { BsFillArrowLeftCircleFill } from 'react-icons/bs'
 import { MdNotificationsNone } from 'react-icons/md'
 import { RiMoonLine } from 'react-icons/ri'
 
 
 const Dashboard = () => {
-
-
   return (
     <>
       {/* <Navbar /> */}
       <section className='dashboard-container'>
         <input type="checkbox" id="nav-toggle" />
-        <div className="sidebar">
+        <div className="sidebar no-print">
           <div className="sidebar-brand">
             <h1> <span className="fab fa-asymmetrik"> </span> <span>ADMIN PANEL</span>
             </h1>
@@ -58,7 +52,7 @@ const Dashboard = () => {
         </div>
 
         <div className="main-content">
-          <header className='header-container'>
+          <header className='header-container no-print'>
             <label htmlFor="nav-toggle">
               <span >
                 <BsFillArrowLeftCircleFill />

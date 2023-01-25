@@ -7,8 +7,8 @@ const checkRef = React.createRef();
 
 const options = {
   orientation: "landscape",
-  unit: "in",
-  format: [10, 5],
+  unit: 'in',
+  format: [12, 6]
 };
 
 const AllUsers = () => {

@@ -77,13 +77,6 @@
   background-color: var(--white-color);
   opacity: 0;
 }
-/* .active-navlink::before{
-  opacity: 1;
-  list-style-type: none;
-}
-.header-active .active-navlink::before{
-  background-color: var(--text-color);
-} */
 
 .nav-btn{
   font-size: 14px;

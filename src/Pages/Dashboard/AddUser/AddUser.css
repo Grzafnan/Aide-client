@@ -1,11 +1,4 @@
 
-
-
-
-.add-user-wrapper{
-
-}
-
 .user-title{
   font-size: 2rem;
   margin-bottom: 3rem ;
@@ -80,7 +73,7 @@ padding: 10px;
   font-family: "Arial", Times, serif;
 }
 
-.user-form-contact-input {
+.user-form-contact-input{
   width: 100%;
   color: #292929;
   font-size: 18px;
@@ -94,6 +87,26 @@ padding: 10px;
   border-left: 1px solid #ccc;
 }
 
+.description-area textarea{
+  width: 400px;
+  height: 100px;
+  color: #292929;
+  font-size: 18px;
+  background-color: #e9e9e9;
+  border: 1px solid #e9e9e9;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+}
+.description-area textarea:focus{
+  outline: none;
+}
+
+
+
+
 .user-form-input{
   display: grid;
   grid-template-columns: repeat(2, 30%);
@@ -101,11 +114,12 @@ padding: 10px;
   margin-top: 1rem;
 }
 
-.user-form-input label{
+.user-form-input label, .description-area label{
   display: inline-block;
   font-size: 1.2rem;
   margin-bottom: .6rem;
 }
+
 
 .user-form-contact-button {
   width: 150px;
@@ -128,6 +142,11 @@ padding: 10px;
   opacity: 1;
 }
 
+@media only screen and (max-width: 960px) {
+  .description-area textarea{
+    width: 450px;
+  }
+}
 
 @media only screen and (max-width: 560px) {
   .cilck-image{
@@ -136,4 +155,8 @@ padding: 10px;
   .user-form-input{
     grid-template-columns: repeat(1, 100%);
   }
+  .description-area textarea{
+    width: 90vw;
+  }
 }
+

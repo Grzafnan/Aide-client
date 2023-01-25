@@ -158,8 +158,8 @@ const AllUsersTable = ({ nextRef, options }) => {
       name: "ACTION",
 
       cell: (row, i) => (
-        <div className="dropdown-checkbox print:hidden ">
-          <label tabIndex={0}>
+        <div className="dropdown-checkbox hidden-action">
+          <label tabIndex={0} className="">
             <HiOutlineDotsVertical />
           </label>
           <ul
@@ -185,16 +185,16 @@ const AllUsersTable = ({ nextRef, options }) => {
 
   return (
     <div className='all-users-container'>
-      <div className='header-menus'>
+      <div className='header-menus no-print'>
         <div className='action-container'>
           <div>
             <Pdf
               targetRef={nextRef}
               filename="Users.pdf"
               options={options}
-            // x={0.1}
-            // y={0.5}
-            // scale={0.8}
+              x={0.1}
+              y={0.5}
+              scale={0.8}
             >
               {({ toPdf }) => (
                 <button
@@ -279,7 +279,7 @@ const AllUsersTable = ({ nextRef, options }) => {
                   /></label>
               </li>
               <li className='dropdown-checkbox-list'>
-                <label>
+                <label className=''>
                   ACTION
                   <input type="checkbox" name="type" className='dropdown-checkbox-input'
                     checked={!hideAction}
@@ -290,7 +290,7 @@ const AllUsersTable = ({ nextRef, options }) => {
           </div>
         </div>
 
-        <div className='right-side'>
+        <div className='right-side no-print'>
           <div>
             <input type="text" className="search-user" name="username" placeholder="Search" required />
           </div>
@@ -302,11 +302,12 @@ const AllUsersTable = ({ nextRef, options }) => {
       </div>
 
       <div ref={nextRef}>
-        <div className='creator-container'>
-          <h1> My Name is {user?.displayName}</h1>
+        <div className='creator-container creator-show'>
+          <h1> My Name is {user?.displayName}.</h1>
           <h3>I created this table</h3>
         </div>
         <DataTable
+          id="table-to-xls"
           columns={columns}
           data={users}
           pagination
@@ -317,6 +318,55 @@ const AllUsersTable = ({ nextRef, options }) => {
         />
       </div>
 
+
+      {/* table export xls  */}
+      <div className="hidden">
+        <h1>All User</h1>
+        <div>
+          <table id="table-to-xls">
+            <thead>
+              <tr>
+                <th>
+                  <h3>User Panel</h3>
+                </th>
+              </tr>
+              <tr>
+                <th>Name</th>
+                <th>User Name</th>
+                <th>EMAIL</th>
+                <th>ROLE</th>
+                <th>PLAN</th>
+                <th>STATUS</th>
+              </tr>
+            </thead>
+            <tbody>
+              {users.map((user) => (
+                <tr key={user?._id}>
+                  <th>
+                    <div className="flex">
+                      <img
+                        width={34}
+                        height={34}
+                        className=""
+                        src={user.image}
+                        alt=""
+                      />{" "}
+                      <div>
+                        <p className="">{user.name}</p>
+                      </div>
+                    </div>
+                  </th>
+                  <th>@{user.username}</th>
+                  <td>{user?.email}</td>
+                  <td>{user?.role}</td>
+                  <td>{user?.plan}</td>
+                  <td>{user?.status}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   );
 };

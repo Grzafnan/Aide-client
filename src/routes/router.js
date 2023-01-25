@@ -6,6 +6,7 @@ import AddProduct from "../Pages/Dashboard//AddProduct/AddProduct";
 import AddUser from "../Pages/Dashboard/AddUser/AddUser";
 import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
 import Dashboard from "../Pages/Dashboard/Dashboard/Dashboard";
+import EditUser from "../Pages/Dashboard/EditUser/EditUser";
 import Home from "../Pages/Home/Home";
 
 export const router = createBrowserRouter([
@@ -45,8 +46,10 @@ export const router = createBrowserRouter([
         path: 'add-product',
         element: <AddProduct />
       },
-
-
+      {
+        path: 'edit/:id',
+        element: <EditUser />
+      }
     ]
   }
 ])

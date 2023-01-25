@@ -90,10 +90,10 @@ const AddProduct = () => {
     <section className='add-user-wrapper container'>
       <div className="user-form-container">
         <form onSubmit={handleAddProducts} className="user-form-contact" tabIndex="1">
-          <h1 className='user-title'>Add User</h1>
+          <h1 className='user-title'>Add Product</h1>
           <div className='upload-wrapper'>
             <div>
-              <h3 className='user-upload-title'>Upload your Image</h3>
+              <h3 className='user-upload-title'>Upload product Image</h3>
               <div {...getRootProps({ className: 'cilck-image' })}>
                 <input name='image' {...getInputProps()} />
                 <div className='upload-div'>
@@ -114,16 +114,16 @@ const AddProduct = () => {
 
           <div className='user-form-input'>
             <div>
-              <label htmlFor="name">Name</label>
+              <label htmlFor="name">Product Name</label>
               <input type="text" className="user-form-contact-input" name="name" placeholder="Product Name" required />
             </div>
             <div>
-              <label htmlFor="price">Price</label>
+              <label htmlFor="price">Product Price</label>
               <input type="number" className="user-form-contact-input" name="price" placeholder=" Enter a price" required />
             </div>
-            <div>
+            <div className='description-area'>
               <label htmlFor="description">Description</label>
-              <textarea style={{ padding: '10px' }} type="text" rows="6" cols="55" name="description" placeholder="Write a description" required />
+              <textarea style={{ padding: '10px' }} type="text" name="description" placeholder="Write a description" required />
             </div>
           </div>
           <button type="submit" className="user-form-contact-button">
