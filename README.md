@@ -1,4 +1,4 @@
-[Live-Link](https://aide-auth.web.app/).
+[Live-Link](https://aide-auth.web.app/)
 
 ## Admin Credentials
 
