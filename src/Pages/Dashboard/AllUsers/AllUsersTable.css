@@ -1,0 +1,282 @@
+
+
+.all-users-container{
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.header-menus{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.action-container{
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  background-color: #fff;
+}
+
+.right-side{
+  display: flex;
+  /* width: 40%; */
+  gap: 10px;
+  align-items: center;
+}
+
+
+/* btn btn-outline print:hidden flex items-center gap-1 */
+
+
+.pdf-button{
+display: flex;
+align-items: center;
+gap: .2rem;
+font-weight: 600;
+padding: 10px 20px;
+border: 1px solid #000;
+border-radius: 10px;
+cursor: pointer;
+transition: background 0.3s linear;
+}
+
+.pdf-button:hover{
+  color: #fff;
+  background-color: var(--primary-color-hover);
+  border: 1px solid var(--primary-color-hover);
+}
+
+.download-table-xls-button{
+  border: none;
+}
+
+
+.show-hide-button{
+font-weight: 400;
+padding: 8px 12px;
+border: 1px solid #000;
+border-radius: 10px;
+cursor: pointer;
+transition: background 0.3s linear;
+}
+
+.show-hide-button:hover{
+  color: #fff;
+  background-color: var(--primary-color-hover);
+  border: 1px solid var(--primary-color-hover);
+}
+
+.dropdown-checkbox{
+  position:relative;
+  /* display:inline-block */
+}
+
+.action-list-container{
+  position: absolute;
+  background: #cacaca;
+  list-style: none;
+  min-width: 180px;
+  margin: 0px;
+  padding:0px;
+  right:0px;
+  display:none;
+  border-radius: 10px;
+  z-index:1000;
+  border: 1px solid #9c9c9c;
+}
+
+
+.action-checkbox-list{
+  font-size: 15px;
+  padding: 10px;
+  border-bottom: 1px solid #a5a5a5;
+  margin: 0px;
+}
+
+.dropdown-checkbox:hover .action-list-container{
+  display:block;
+}
+
+.action-checkbox-list a, .action-checkbox-list button{
+  width: 100%;
+  display: inline-block;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 4px 8px;
+  border: none;
+  color: #fff;
+  background-color: var(--primary-color-hover);
+  text-decoration: none;
+}
+
+
+
+.dropdown-checkbox-list-container{
+     position: absolute;
+    background: #cacaca;
+    list-style: none;
+    min-width: 180px;
+    margin: 0px;
+    padding:0px;
+    left:0px;
+	  display:none;
+    margin-top: 10px;
+    border-radius: 10px;
+	  z-index:1000;
+    border: 1px solid #9c9c9c;
+}
+.dropdown-checkbox-list{
+    font-size: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #a5a5a5;
+    margin: 0px;
+}
+.dropdown-checkbox-input{
+  margin-right:10px;
+}
+
+.dropdown-checkbox-list label{
+  display: flex;
+  gap: 10px;
+  font-size: 18px;
+}
+
+.dropdown-checkbox-list input{
+width: 20px;
+}
+
+.dropdown-checkbox:hover .dropdown-checkbox-list-container{
+  display:block;
+}
+
+
+.search-user{
+  padding: 8px;
+  width: 200px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #000;
+}
+
+.add-button{
+font-weight: 600;
+padding: 10px 12px;
+border: 1px solid #000;
+border-radius: 10px;
+cursor: pointer;
+color: #fff;
+background-color: var(--primary-color-hover);
+border: 1px solid var(--primary-color-hover);
+}
+
+.creator-container{
+  margin: 20px 0;
+  display: none;
+}
+
+
+.user-div{
+display: flex;
+gap: 4px;
+align-items: center;
+}
+
+
+.user-img{
+  border-radius: 50%;
+}
+
+.user-name, .status{
+  font-size: 14px;
+  font-weight: 400;
+}
+.username{
+  font-size: 12px;
+  font-weight: 400;
+  color: #888682;
+}
+.user-email, .role, .plan{
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.user-role-div{
+  display: flex;
+  gap: 4px;
+}
+
+
+.status{
+  padding: 4px 8px;
+  border-radius: 20px;
+}
+
+.status-active{
+  color: rgb(2, 109, 2);
+  background-color: rgba(15, 255, 15, 0.336);
+}
+
+.status-inactive{
+  color: #8D9096 ;
+background-color: #F1F1F2;
+}
+
+.status-pending{
+  color: #ffb300;
+  background-color: #fdede1;
+}
+.btn-success{
+ font-weight: 600;
+  padding: 4px 8px;
+  background-color: green;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-left: 1rem;
+}
+
+.btn-danger{
+  font-weight: 600;
+   padding: 4px 8px;
+   background-color: red;
+   color: #fff;
+   border: none;
+   cursor: pointer;
+   border-radius: 10px;
+ }
+.table-icons{
+  font-size: 16px !important;
+}
+
+.admin-icon{
+  color: red;
+}
+.editor-icon, .author-icon{
+  color: #8D9096;
+}
+
+.maintainer-icon{
+  color: #5FCD0F;
+}
+
+.subscriber-icon{
+  color: #9155FD;
+}
+
+@media print {
+  body, .example, #example {
+    display: block !important;
+    position: relative !important;
+    width: auto !important;
+    height: auto !important;
+    overflow: visible !important;
+    margin-left: 0 !important;
+  }
+}

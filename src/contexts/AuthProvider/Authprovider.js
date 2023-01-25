@@ -70,6 +70,7 @@ const Authprovider = ({ children }) => {
     verify,
     resetPass,
     logOut,
+    setLoading
   }
 
   return (

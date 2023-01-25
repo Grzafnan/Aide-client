@@ -1,12 +1,14 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Spinner from '../../../components/Spinner/Spinner';
 import { AuthContext } from '../../../contexts/AuthProvider/Authprovider';
+import useRole from '../../../hooks/useRole';
 import './Navbar..css'
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const { user, logOut } = useContext(AuthContext);
-
+  const [role, isRoleLoading] = useRole(user?.email)
   const openMenu = () => {
     setOpen(true)
   }
@@ -14,6 +16,11 @@ const Navbar = () => {
   const closeMenu = () => {
     setOpen(false)
   }
+
+  if (isRoleLoading) {
+    return <Spinner />
+  }
+  console.log(role);
 
   return (
     <>
@@ -26,20 +33,31 @@ const Navbar = () => {
             <ul className="menu-list flex">
               <li><a href="#home" className="nav-link active-navlink">home</a></li>
               <li><a href="#shop" className="nav-link">Shop</a></li>
-              <li>
-                <Link to="my-cart" className="nav-link">My Cart</Link>
-              </li>
 
               {
-                user?.uid ? (
-                  <>
-                    <li>
-                      <Link to="/dashboard" className="nav-link">Dashboard</Link>
-                    </li>
-                    <li>
-                      <button onClick={logOut} className="nav-btn">Sign out</button>
-                    </li>
-                  </>
+                role === 'user' && (
+                  <li>
+                    <Link to="my-cart" className="nav-link">My Cart</Link>
+                  </li>
+                )
+              }
+
+              {role === 'admin' && (
+                <>
+                  <li>
+                    <Link to="/dashboard" className="nav-link">Dashboard</Link>
+                  </li>
+                </>
+              )
+              }
+
+
+              {
+                user?.email || user?.uid ? (
+                  <li>
+                    <button onClick={logOut} className="nav-btn">Sign out</button>
+                  </li>
+
                 )
                   : (
                     <li>
@@ -47,6 +65,8 @@ const Navbar = () => {
                     </li>
                   )
               }
+
+
 
             </ul>
 

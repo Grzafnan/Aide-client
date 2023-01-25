@@ -9,6 +9,7 @@ import { AuthContext } from '../../../contexts/AuthProvider/Authprovider';
 const Login = () => {
   const [toggle, setToggle] = useState(false);
   const [checkBox, setCheckBox] = useState(false);
+  const [loginUserEmail, setLoginUserEmail] = useState('');
   const { createUser, signInWithEmail, updateUserProfile, setLoading } = useContext(AuthContext)
 
 
@@ -69,7 +70,7 @@ const Login = () => {
       .then((userCredential) => {
         const user = userCredential.user;
         // console.log(user);
-        // setLoginUserEmail(data.email)
+        setLoginUserEmail(email)
         form.reset();
         navigate('/');
         toast.success('Login successful');

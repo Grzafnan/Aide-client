@@ -52,7 +52,6 @@ h2{
   -webkit-box-orient: vertical;
 }
 .btn{
-  text-decoration: none;
   display: inline-block;
   position: absolute;
   bottom: 15px;
@@ -68,8 +67,58 @@ h2{
   border-radius: 5px;
   border: none;
   cursor: pointer;
-  transition: backgound 0.5s linear;
+  transition: background 0.5s linear;
 }
 .btn:hover{
+  background: var(--primary-color-hover);
+}
+
+.hidden{
+  display: none;
+}
+
+.quantity-flex{
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+}
+
+.buy-btn{
+  width: 40%;
+  text-align: center;
+  text-transform: capitalize;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.5s linear;
+}
+
+.buy-btn:hover{
+  background: var(--primary-color-hover);
+}
+
+.btn-plus, .btn-minus{
+  font-size: 16px;
+  padding: 8px 12px;
+  background-color: var(--text-color-light);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.5s linear;
+}
+
+
+.btn-minus:hover{
+  background: var(--primary-color-hover);
+}
+.btn-plus:hover{
   background: var(--primary-color-hover);
 }

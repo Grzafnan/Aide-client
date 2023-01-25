@@ -1,0 +1,139 @@
+
+
+
+
+.add-user-wrapper{
+
+}
+
+.user-title{
+  font-size: 2rem;
+  margin-bottom: 3rem ;
+}
+.user-upload-title{
+margin-bottom: .8rem;
+}
+
+.cilck-image{
+  width: 450px;
+  height: 200px;
+  padding: 6px 0;
+  border: 2px dashed #000;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+
+.upload-div{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* text-base text-center text-base-300 mb-1 */
+.cilck-image .image-title{
+text-align: center;
+font-size: 1rem;
+}
+
+
+.image-div{
+  display: flex;
+  justify-content: center;
+}
+
+.image-div img{
+  width: 50px;
+}
+
+
+.image-preview-container{
+  width: 450px;
+  height: 200px;
+padding: 10px;
+}
+
+.preview-image{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.aside-container{
+ display: flex;
+ flex-wrap: wrap;
+ margin-top: 16px;
+}
+
+
+.user-form-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.user-form-contact {
+  width: 100%;
+  font-family: "Arial", Times, serif;
+}
+
+.user-form-contact-input {
+  width: 100%;
+  color: #292929;
+  font-size: 18px;
+  background-color: #e9e9e9;
+  border: 1px solid #e9e9e9;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  height: 40px;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+}
+
+.user-form-input{
+  display: grid;
+  grid-template-columns: repeat(2, 30%);
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.user-form-input label{
+  display: inline-block;
+  font-size: 1.2rem;
+  margin-bottom: .6rem;
+}
+
+.user-form-contact-button {
+  width: 150px;
+  font-size: 18px;
+  border-radius: 4px;
+  color: #fff;
+  height: 40px;
+  opacity: 0.8;
+  margin: 20px 0;
+  cursor: pointer;
+  background: var(--primary-color);
+  display: block;
+  border: none;
+  border-bottom: 1px solid #500707;
+  border-right: 1px solid #500707;
+  transition: 1s;
+}
+
+.user-form-contact-button:hover {
+  opacity: 1;
+}
+
+
+@media only screen and (max-width: 560px) {
+  .cilck-image{
+    width: 100%;
+  }
+  .user-form-input{
+    grid-template-columns: repeat(1, 100%);
+  }
+}
